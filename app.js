@@ -1,19 +1,22 @@
 const express = require("express")
 const axios = require("axios")
 
-const app = express()
-// define port 8080
-PORT = 8080
-app.use(express.json())
-// use router to bundle all routes to /
-const router = express.Router()
-app.use("/", router)
-// get on root route
-router.get("/", (req,res) => {
-	res.send("hello world!!!")
-})
-
-// start server
-app.listen(PORT, () => {
-	console.log("Server is up and running!!")
-})
+function main(args) {
+	const body = {
+	  args,
+	  env: process.env,
+	};
+  
+	console.log(`Return body: ${JSON.stringify(body, null, 2)}`);
+  
+	return {
+	  statusCode: 200,
+	  headers: { 
+		'Content-Type': 'application/json', 
+	  },
+	  body: "Ola mundo",
+	};
+  }
+  
+  module.exports.main = main;
+  
