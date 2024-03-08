@@ -7,9 +7,6 @@ WORKDIR /app
 # Copie o package.json e o package-lock.json para o diretório de trabalho
 COPY package*.json ./
 
-ENV USER_MAIL = michel.ziade@redesignconsultoria.com.br
-ENV USER_PASSWORD = Ziade@123
-
 # Instale as dependências da aplicação
 RUN npm install
 
