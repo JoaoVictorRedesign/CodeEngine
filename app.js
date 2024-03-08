@@ -2,6 +2,7 @@ function main(args) {
   const body = {
     args,
     env: process.env,
+    "teste":"Ola mundo"
   };
 
   console.log(`Return body: ${JSON.stringify(body, null, 2)}`);
