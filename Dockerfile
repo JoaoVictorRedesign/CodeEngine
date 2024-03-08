@@ -13,8 +13,5 @@ RUN npm install
 # Copie o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
-# Exponha a porta 8080
-EXPOSE 8080
-
 # Comando para iniciar a aplicação
 CMD ["npm", "start"]

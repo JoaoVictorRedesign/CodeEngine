@@ -1,24 +1,19 @@
-const express = require("express")
-const axios = require("axios")
+function main(args) {
+  const body = {
+    args,
+    env: process.env,
+    "teste":"Ola mundo"
+  };
 
+  console.log(`Return body: ${JSON.stringify(body, null, 2)}`);
 
-console.log("Ola mundo")
-  // Importa o módulo express
+  return {
+    statusCode: 200,
+    headers: { 
+      'Content-Type': 'application/json', 
+    },
+    body,
+  };
+}
 
-// Cria uma instância do express
-const app = express();
-
-// Define uma rota básica
-app.get('/', (req, res) => {
-  res.send('Olá, mundo!');
-});
-
-// Define a porta em que o servidor irá escutar
-PORT = 8080;
-
-// Inicia o servidor na porta especificada
-app.listen(PORT, () => {
-  console.log(`Servidor está ouvindo na porta ${PORT}`);
-});
-
-  
+module.exports.main = main;
