@@ -40,3 +40,5 @@ async function main() {
    
     return { body: respose };
 }
+
+module.exports.main = main;
