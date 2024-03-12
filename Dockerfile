@@ -1,5 +1,5 @@
 # Use a imagem oficial do Node.js na versão 18.16.0
-FROM node:18.16.0-alpine
+FROM icr.io/codeengine/node:20-alpine
 
 # Crie e defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
