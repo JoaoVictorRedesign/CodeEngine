@@ -12,7 +12,7 @@ function main(args) {
     headers: { 
       'Content-Type': 'application/json', 
     },
-    body,
+    body: body,
   };
 }
 
